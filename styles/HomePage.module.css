@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Epilogue');
+
+.homeTotalContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.homeHeader {
+    height: 64px;
+    border-bottom: 1px solid #EBEFF2;
+    display: flex;
+    align-items: center;
+}
+
+.homeHeader input {
+    border: 0;
+    font-family: 'Epilogue';
+    margin-left: 18px;
+    padding: 0;
+}
+
+.homeHeader input:focus {
+    outline-width: 0;
+}
+
+.firstRowCard {
+    padding: 19px 21px 19px 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heroNormalCardContainer {
+    height: 150px;
+    width: 25%;
+    background-color: #EAECF0;
+    border-radius: 15px;
+    margin-left: 10px;
+}

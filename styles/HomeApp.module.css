@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Epilogue');
+
+.mainPageTotalContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.sidebarTotalContainer {
+    height: 100%;
+    width: 256px;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+}
+
+.logoIconContainer {
+    border-bottom: 1px solid #EBEFF2;
+    padding-bottom: 13px;
+}
+
+.sidebarHomeAndProfileContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 21px;
+    border-bottom: 1px solid #EBEFF2;
+    padding-bottom: 22px;
+}
+
+.sidebarHomeAndProfileContainer button {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+    cursor: pointer;
+    width: 35%;
+}
+
+.sidebarHomeAndProfileContainer button p {
+    margin-left: 16.5px;
+    font-family: 'Epilogue';
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.logoutButton {
+    background-color: transparent;
+    width: 30%;
+    border: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+    cursor: pointer;
+}
+
+.logoutButton p {
+    margin-left: 18.33px;
+    font-family: 'Epilogue';
+}

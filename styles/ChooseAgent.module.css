@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+.chooseAgentButtonContainer {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chooseAgentButtonContainer button {
+    background-color: #00113D;
+    height: 48px;
+    width: 88px;
+    border-radius: 8px;
+    border: 0;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

@@ -79,7 +79,7 @@ export default function Dropdown() {
             src={open ? chevronUp : chevronDown} 
             alt="chervon down"
             style={{
-                marginLeft: 125
+                marginLeft: 85
             }}
             />
         </button>

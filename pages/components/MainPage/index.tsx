@@ -9,11 +9,21 @@ import profileLogo from '../../../assets/profile.png'
 import profileLogoOrange from '../../../assets/profile-orange.png'
 import logoutIcon from '../../../assets/logout-sidebar-icon.png'
 import Home from '../Home'
+import Profile from '../Profile'
+import api from '@/pages/api'
 
 
 export default function MainPage() {
 
     const [selectedButton, setSelectedButton] = useState('Home')
+    const [heroInfoList, setHeroInfoList] = useState([{}])
+
+    const handleGetHero = async (heroId: number) => {
+       const hero = await api.get(`characters/${heroId}?ts=1&apikey=8e189e38b795781f597e1b3459108c9a&hash=233179203a23baa31143bb8605fa3b2d`);
+       const {data} = hero
+       setHeroInfoList(data)
+       setSelectedButton('Profile')
+    }
 
     return (
         <div className={styles.mainPageTotalContainer}>
@@ -52,7 +62,11 @@ export default function MainPage() {
                     <p>Sair</p>
                 </button>
             </div>
-            <Home />
+            {selectedButton === 'Home' ?
+            <Home handleGetHero={handleGetHero} />
+            :
+            <Profile heroInfoListTotal={heroInfoList} />
+            }
         </div>
     )
 }

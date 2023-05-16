@@ -26,6 +26,7 @@ export default function Home() {
 
   const [showLoginContainer, setShowLoginContainer] = useState(true);
   const [showEmailSentContainer, setShowEmailSentContainer] = useState(false);
+  const [showChooseAgent, setShowChooseAgent] = useState(false);
 
   return (
     <div className={styles.loginTotalPage}>
@@ -45,8 +46,10 @@ export default function Home() {
         />
         <div className={styles.loginInfoContainer}>
           {showLoginContainer ? 
+          showChooseAgent ?
           <ChooseAgent />
-          // <Login setShowLoginContainer={setShowLoginContainer} /> 
+          :
+          <Login setShowLoginContainer={setShowLoginContainer} setShowChooseAgent={setShowChooseAgent} /> 
           :
           showEmailSentContainer ?
           <EmailSent setShowLoginContainer={setShowLoginContainer} setShowEmailSentContainer={setShowEmailSentContainer} />

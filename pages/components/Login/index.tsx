@@ -8,7 +8,7 @@ import loginButtonIcon from '../../../assets/login_button_icon.png'
 import forgotPasswordIcon from '../../../assets/forgot_password_text_icon.png'
 import Link from "next/link";
 
-export default function Login ({ setShowLoginContainer }: any) {
+export default function Login ({ setShowLoginContainer, setShowChooseAgent }: any) {
 
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ export default function Login ({ setShowLoginContainer }: any) {
 
     const handleCheckUser = () => {
         if (email === 'rafael.dias@pontua.com' && password === '123456') {
-          
+          setShowChooseAgent(true);
         } else {
           alert('Usuário ou senha incorretas')
         }

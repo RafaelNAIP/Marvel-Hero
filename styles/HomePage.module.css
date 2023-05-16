@@ -25,14 +25,87 @@
 
 .firstRowCard {
     padding: 19px 21px 19px 17px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row dense;
+    column-gap: 40px;
+    row-gap: 10px;
 }
 
 .heroNormalCardContainer {
-    height: 150px;
-    width: 25%;
+    height: 178px;
+    width: 100%;
     background-color: #EAECF0;
     border-radius: 15px;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.heroNormalCardContainer div {
+    height: 138px;
+    margin-left: 14px;
+    overflow: hidden;
+}
+
+.heroNormalCardContainer h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.heroNormalCardContainer p {
+    font-weight: 300;
+    font-size: 12px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    font-family: 'Epilogue';
+}
+
+.heroBigCardContainer {
+    height: 150px;
+    width: 50%;
+    background-color: #EAECF0;
+    border-radius: 15px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    padding: 14px 10px 14px 10px;
+}
+
+.heroBigCardContainer div {
+    height: 138px;
+    margin-left: 14px;
+    overflow: hidden;
+}
+
+.heroBigCardContainer h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.paginationContainer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationContainer button {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #D0D5DD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
 }

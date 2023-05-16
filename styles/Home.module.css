@@ -10,10 +10,9 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
-  margin-top: 83px;
   justify-content: space-around;
 }
-
+ 
 .loginInfoContainer {
   height: 384px;
   width: 321px;

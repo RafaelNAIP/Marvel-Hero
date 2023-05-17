@@ -21,7 +21,6 @@ export default function Home() {
 
   const apiTest = async () => {
     const result = await api.get('characters?ts=1&apikey=8e189e38b795781f597e1b3459108c9a&hash=233179203a23baa31143bb8605fa3b2d');
-    console.log(result);
   }
 
   const [showLoginContainer, setShowLoginContainer] = useState(true);

@@ -4,8 +4,6 @@ import styles from '@/styles/HomePage.module.css'
 
 export default function HeroCard({ heroInfo, style = {}, handleGetHero }: {heroInfo: any, style: any, handleGetHero: Function}) {
 
-    console.log(heroInfo, 'HEROINFO')
-
     return (
         <button className={styles.heroNormalCardContainer} style={style} onClick={() => handleGetHero(heroInfo.id)}>
             <Image 

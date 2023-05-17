@@ -14,7 +14,6 @@ export default function Profile({heroInfoListTotal}: {heroInfoListTotal: object[
 
     const [heroInfoScreen, setHeroInfoScreen] = useState('overview')
     const [heroInfoList, setHeroInfoList] = useState<string[]>(['']);
-    console.log(heroInfoListTotal, 'ASHUDUASH')
     
     const handleList = () => {
         switch (heroInfoScreen) {

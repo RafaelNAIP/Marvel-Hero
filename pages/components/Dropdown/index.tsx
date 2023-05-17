@@ -60,7 +60,6 @@ export default function Dropdown() {
     const handleOpen = () => {
     setOpen(!open);
     };
-    console.log(agent.name.length);
 
     return (
         <div className={styles.dropdown}>

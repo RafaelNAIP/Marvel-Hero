@@ -12,7 +12,6 @@ export default function ForgotPassword ({ setShowEmailSentContainer }: any) {
     const handleVerifyEmail = (email: string) => {
         const haveAt = email.includes('@');
         const haveDotCom = email.includes('.com');
-        console.log(haveAt, haveDotCom, "email checker")
         if(haveAt && haveDotCom) {
             setCanSendLink(true)
         } else {

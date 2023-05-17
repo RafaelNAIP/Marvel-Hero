@@ -11,23 +11,18 @@ import { useEffect, useState } from 'react'
 export default function Home({ handleGetHero }: { handleGetHero: Function }) {
 
     const [firstList, setFirstList] = useState<object[]>([])
+    const [pageNumber, setPageNumber] = useState(1)
 
     const handleHeroes = async () => {
         const heroList = await api.get('characters?ts=1&apikey=8e189e38b795781f597e1b3459108c9a&hash=233179203a23baa31143bb8605fa3b2d');
         
         const { results } = heroList.data.data
-        console.log(results)
-        setFirstList(results.slice(0, 10))
+        setFirstList(results.slice((pageNumber*10) - 10, pageNumber*10))
     }
 
     useEffect(() => {
         handleHeroes()
-    }, [])
-
-    //const apiTest = async () => {
-        //const result = await api.get('characters?ts=1&apikey=8e189e38b795781f597e1b3459108c9a&hash=233179203a23baa31143bb8605fa3b2d');
-        //console.log(result);
-     // }
+    }, [pageNumber])
     
 
     return (
@@ -50,9 +45,8 @@ export default function Home({ handleGetHero }: { handleGetHero: Function }) {
                 }): []}
             </div>
             <div className={styles.paginationContainer}>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button onClick={() => setPageNumber(1)}>1</button>
+                <button onClick={() => setPageNumber(2)}>2</button>
             </div>
         </div>
     )
